@@ -19,10 +19,6 @@ public class EmployeeController {
        return employeeRepository.save(employee);
     }
 
-    @GetMapping("/employees/info/{id}")
-    public String findByLastName(@PathVariable("id") Integer id){
-        return employeeRepository.findByLastname(id);
-    }
 
     @GetMapping("/employees/{firstname}")
     public List<Employee> findByFirstName(@PathVariable("firstname") String firstname){
